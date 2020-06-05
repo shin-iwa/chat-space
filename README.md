@@ -32,12 +32,12 @@
 |name|integer|null: false|
 
 ### Association
-- belongs_to :user
-- has_manu :users through: :users_groups
+- has_many :messages
+- has_many :users through: :users_groups
 - has_many :users_groups
 
 
-## groups_usersテーブル
+## users_groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
