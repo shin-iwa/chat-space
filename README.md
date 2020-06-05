@@ -1,4 +1,4 @@
-## userテーブル
+## usersテーブル
 
 |Colum|Type|Options|
 |-----|----|-------|
@@ -7,10 +7,10 @@
 |password|string|null: false|
 
 ### Association
-- has_many :message
+- has_many :messages
 - has_many :users_groups
 
-## Messageテーブル
+## Messagesテーブル
 
 |Colum|Type|Options|
 |-----|----|-------|
@@ -20,8 +20,8 @@
 |group_id|intenger|null: false, foreign: true|
 
 ### Association
-- belongs_to :group
-- belongs_to :user
+- belongs_to :groups
+- belongs_to :users
 
 
 ## groupsテーブル
