@@ -7,8 +7,8 @@
 |password|string|null: false|
 
 ### Association
-has_many :message
-has_many :users_groups
+- has_many :message
+- has_many :users_groups
 
 ## Messageテーブル
 
