@@ -20,6 +20,10 @@
 |user_id|intenger|null: false, foreign: true|
 |group_id|intenger|
 
+### Association
+- belongs_to :users_group
+- belongs_to :
+
 
 ## groups_usersテーブル
 
