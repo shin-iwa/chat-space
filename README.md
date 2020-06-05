@@ -2,27 +2,37 @@
 
 |Colum|Type|Options|
 |-----|----|-------|
-|id|intenger|null: false, foreign_key: true|
-|name|intenger|null: false, foreign_key: true|
+|name|string|null: false|
+|email|string|null: false|
+|password|string|null: false|
 
 ### Association
-- belongs_to :users_group
-- belongs_to :
-
+has_many :message
+has_many :users_groups
 
 ## Messageテーブル
 
 |Colum|Type|Options|
 |-----|----|-------|
-|id|intenger|null: false, foreign_key: true|
-|body|text|null:false, foreign_key: true|
+|body|text|null:false|
 |image|string|
 |user_id|intenger|null: false, foreign: true|
-|group_id|intenger|
+|group_id|intenger|null: false, foreign: true|
 
 ### Association
-- belongs_to :users_group
-- belongs_to :
+- belongs_to :group
+- belongs_to :user
+
+
+## groupsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|integer|null: false|
+
+### Association
+- belongs_to :users
+- has_many :users_groups
 
 
 ## groups_usersテーブル
@@ -33,5 +43,5 @@
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :group
-- belongs_to :user
+- belongs_to :groups
+- belongs_to :users
