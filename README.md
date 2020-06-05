@@ -1,3 +1,12 @@
+## userテーブル
+
+|Colum|Type|Options|
+|-----|----|-------|
+|id|intenger|null: false, foreign_key: true|
+
+
+
+
 ## groups_usersテーブル
 
 |Column|Type|Options|
