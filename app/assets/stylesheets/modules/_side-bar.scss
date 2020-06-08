@@ -1,0 +1,59 @@
+.Side-bar {
+  width:300px;
+  height: 100vh;
+  &__user-name {
+    height: 100px;
+    background-color: #253141;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__top {
+      height:20px;
+      width:260px;
+      // background-color: #d8d8d8;
+      margin: 0 20px;
+      display:flex;
+      color: #ffffff;
+      &__left {
+        width:200px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      &__right {
+        width:60px;
+        // background-color: red;
+        position: relative;
+        right: 0px;
+        &__box {
+          position: absolute;
+          right: 0px;
+        }
+        .far{
+          color: white;
+          text-decoration: none;
+          margin-right: 5px;
+        }
+        .fas{
+          color: white;
+          text-decoration: none;
+        }
+      }
+    }
+  }  
+  &__group-list {
+    height: calc(100vh - 100px);
+    background-color: #2f3e58;
+    padding: 20px 20px 0 20px;
+    &__top {
+      // background-color: white;
+      width: 260px;
+      font-size: 16px;
+      color: white;
+    }
+    &__center {
+      margin: 5px 0 0 0;
+      font-size: 11px;
+      color: white;
+      }
+    }
+  }
