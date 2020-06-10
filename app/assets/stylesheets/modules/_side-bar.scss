@@ -42,15 +42,18 @@
     height: calc(100vh - 100px);
     background-color: #2f3e58;
     padding: 20px 20px 0 20px;
-    &__top {
-       width: 260px;
-      font-size: 16px;
-      color: white;
+    &__apper {
+      padding-bottom: 40px;
     }
-    &__center {
-      margin: 5px 0 0 0;
-      font-size: 11px;
-      color: white;
+      &__top {
+        width: 260px;
+        font-size: 16px;
+        color: white;
+      }
+      &__center {
+        margin: 5px 0 0 0;
+        font-size: 11px;
+        color: white;
       }
     }
   }
