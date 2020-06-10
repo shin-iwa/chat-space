@@ -2,12 +2,12 @@
   .Side-bar__user-name 
     .Side-bar__user-name__top
       .Side-bar__user-name__top__left
-        %p masa
+        = current_user.name
       .Side-bar__user-name__top__right
         .Side-bar__user-name__top__right__box
           = link_to "#", class: "far fa-edit" do
             = icon('far', 'fa-edit')
-          = link_to "#", class: "fas fa-cog" do
+          = link_to edit_user_path(current_user), class: "fas fa-cog" do
             = icon('fas', 'fa-cog') 
             
 
