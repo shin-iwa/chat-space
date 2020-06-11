@@ -2,11 +2,12 @@
   .Chat-main__group-info
     .Chat-main__group-info__left
       .Chat-main__group-info__left__top 
-        test
+        = @group.name
       .Chat-main__group-info__left__bottom
-        Member: masa
+        -# Member: masa
+        Member:#{current_user.name}
     .Chat-main__group-info__right
-      =link_to "#", class:"edit" do
+      =link_to edit_group_path(@group), class:"edit" do
         Edit
 
   .Chat-main__message-list
@@ -32,11 +33,12 @@
   .Chat-main__message-form
     .Chat-main__message-form__left
       .Chat-main__message-form__left__one
-        %input{type: "text",class:"text-box",placeholder:"type a message"}
-      .Chat-main__message-form__left__two
-        %label{class: "input-box__image"}
-          = icon('fas', 'image')
-          %input{type: "file"}
-    .Chat-main__message-form__right
-      %input{type: "submit",class:"send",value:"Send"}
-
+        = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
+          .Chat-main__message-form__left__one__trial
+            = f.text_field :content, class: 'Form__inputContent', placeholder: 'type a message'
+            .Chat-main__message-form__left__two
+              = f.label:image, class: "input-box__image" do
+                = icon('fas', 'image')
+                = f.file_field:image
+          .Chat-main__message-form__right
+            = f.submit 'Send', class: "send"
