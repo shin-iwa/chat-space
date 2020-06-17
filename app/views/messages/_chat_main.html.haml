@@ -8,34 +8,12 @@
 
         - @group.users.each do |user|
           = user.name
-            
-        -# - current_group.users.each do |user|
-        -#   = group.user
     .Chat-main__group-info__right
       =link_to edit_group_path(@group), class:"edit" do
         Edit
 
   .Chat-main__message-list
     = render @messages
-    -# .Chat-main__message-list__block
-    -#   .Chat-main__message-list__block__top
-    -#     %p.title masa
-    -#     %p.date 
-    -#       2020/05/12(Wed) 17:43:01
-    -#   .Chat-main__message-list__block__center
-    -#     %p おはよう！
-    -#   .Chat-main__message-list__block__top
-    -#     %p.title masa
-    -#     %p.date 
-    -#       2020/05/12(Wed) 17:43:01
-    -#   .Chat-main__message-list__block__center
-    -#     %p こんにちは！
-    -#   .Chat-main__message-list__block__top
-    -#     %p.title masa
-    -#     %p.date 
-    -#       2020/05/12(Wed) 17:43:01
-    -#   .Chat-main__message-list__block__center
-    -#     %p こんばんは！
   .Chat-main__message-form
     .Chat-main__message-form__left
       .Chat-main__message-form__left__one
